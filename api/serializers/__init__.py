@@ -1,0 +1,2 @@
+from .municipality import MunicipalityPublicSerializer
+from .weather_forecast_setting import WeatherForecastSettingPublicSerializer, WeatherForecastSettingUpdateSerializer
