@@ -1,2 +1,3 @@
 from .municipality_list import MunicipalityList
 from .weather_forecast_setting_detail import WeatherForecastSettingDetail
+from .farm_field_list import FarmFieldList
