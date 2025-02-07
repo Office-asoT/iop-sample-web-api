@@ -19,4 +19,3 @@ class DeliveryEmailAddressUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeliveryEmailAddress
         fields = ['delivery_name']
-    

@@ -128,3 +128,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
+
+MAIL_CONTENT = {
+    'TEST_MAIL': {
+        'SUBJECT': 'サンプルアプリ テストメール',
+        'MESSAGE': 'テストメールです。'
+    }
+}

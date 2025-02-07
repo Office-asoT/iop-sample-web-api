@@ -8,8 +8,8 @@ class SendTestMail(APIView):
 
     def post(self, request, user_id):
         to_email = request.data['email_address']
-        subject = "サンプルアプリ テストメール"
-        message = "テストメールです。"
+        subject = settings.MAIL_CONTENT['TEST_MAIL']['SUBJECT']
+        message = settings.MAIL_CONTENT['TEST_MAIL']['MESSAGE']
 
         email = Mail(
             from_email=settings.DEFAULT_FROM_EMAIL,
