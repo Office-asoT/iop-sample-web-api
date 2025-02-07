@@ -2,3 +2,4 @@ from .municipality_list import MunicipalityList
 from .weather_forecast_setting_detail import WeatherForecastSettingDetail
 from .delivery_email_address import DeliveryEmailAddressDetail
 from .send_test_mail import SendTestMail
+from .farm_field_list import FarmFieldList
