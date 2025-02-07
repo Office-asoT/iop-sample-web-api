@@ -1,2 +1,3 @@
 from .municipality import MunicipalityPublicSerializer
 from .weather_forecast_setting import WeatherForecastSettingPublicSerializer, WeatherForecastSettingUpdateSerializer
+from .delivery_email_address import DeliveryEmailAddressPublicSerializer, DeliveryEmailAddressCreateSerializer, DeliveryEmailAddressUpdateSerializer
