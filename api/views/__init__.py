@@ -2,3 +2,5 @@ from .municipality_list import MunicipalityList
 from .weather_forecast_setting_detail import WeatherForecastSettingDetail
 from .display_setting_list import DisplaySettingList
 from .display_setting_detail import DisplaySettingDetail
+from .sensors_data_list import SensorsDataList
+from .latest_sensors_data_list import LatestSensorsDataList
