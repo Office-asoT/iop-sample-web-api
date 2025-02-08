@@ -1,2 +1,4 @@
 from .municipality_list import MunicipalityList
 from .weather_forecast_setting_detail import WeatherForecastSettingDetail
+from .display_setting_list import DisplaySettingList
+from .display_setting_detail import DisplaySettingDetail
