@@ -3,3 +3,5 @@ from .weather_forecast_setting_detail import WeatherForecastSettingDetail
 from .delivery_email_address import DeliveryEmailAddressDetail
 from .send_test_mail import SendTestMail
 from .farm_field_list import FarmFieldList
+from .ja_branch_office import JaBranchOfficeList
+from .fuel_order_target_ja import FuelOrderTargetJaDetail
