@@ -12,4 +12,6 @@ urlpatterns = [
     path('delivery_email_address/<str:user_id>', views.DeliveryEmailAddressDetail.as_view()),
     path('send_test_mail/<str:user_id>', views.SendTestMail.as_view()),
     path('farm_fields/<str:user_id>', views.FarmFieldList.as_view()),
+    path('ja_branch_offices', views.JaBranchOfficeList.as_view()),
+    path('fuel_order_target_jas/<str:user_id>', views.FuelOrderTargetJaDetail.as_view()),
 ]

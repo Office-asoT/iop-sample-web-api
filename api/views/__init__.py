@@ -7,3 +7,5 @@ from .latest_sensors_data_list import LatestSensorsDataList
 from .delivery_email_address import DeliveryEmailAddressDetail
 from .send_test_mail import SendTestMail
 from .farm_field_list import FarmFieldList
+from .ja_branch_office import JaBranchOfficeList
+from .fuel_order_target_ja import FuelOrderTargetJaDetail
