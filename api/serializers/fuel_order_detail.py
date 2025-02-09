@@ -10,11 +10,14 @@ class FuelOrderCreateSerializer(serializers.ModelSerializer):
             'user_id',
             'farm_field_id',
             'ja_branch_office',
+            'ja_branch_office_number',
             'order_date',
             'fuel_type', 
             'quantity',
             'status'
         ]
+        read_only_fields = ['order_date', 'ja_branch_office']
+        
     def create(self, validated_data):
         ja_branch_office_number = validated_data.pop('ja_branch_office_number', None)
         try:

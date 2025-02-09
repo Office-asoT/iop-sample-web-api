@@ -7,16 +7,19 @@ from api.serializers import FuelOrderCreateSerializer, FuelOrderStatusUpdateSeri
 
 class FuelOrderDetail(APIView):
 
-    def post(self, request, *args, **kwargs):
-        serializer = FuelOrderCreateSerializer(data=request.data)
+    def post(self, request, user_id, *args, **kwargs):
+        data = request.data.copy()
+        data['user_id'] = user_id
+        serializer = FuelOrderCreateSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             response_data = serializer.data
             response_data.pop('id', None)  # id をレスポンスから除外
+            print("Response Data:", response_data) 
             return Response(response_data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def patch(self, request, *args, **kwargs):
+    def patch(self, request, user_id, *args, **kwargs):
         serializer = FuelOrderStatusUpdateSerializer(data=request.data)
         if serializer.is_valid():
             user_id = serializer.validated_data['user_id']

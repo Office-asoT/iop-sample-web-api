@@ -1,10 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.http import Http404
 
-from api.models import FuelOrderTargetJa,JaBranchOffice
-from api.serializers import FuelOrderTargetJaPublicSerializer, FuelOrderTargetJaCreateSerializer, FuelOrderTargetJaUpdateSerializer
+from api.models import FuelOrderTargetJa
+from api.serializers import FuelOrderTargetJaPublicSerializer, FuelOrderTargetJaUpdateSerializer
 
 class FuelOrderTargetJaDetail(APIView):
 

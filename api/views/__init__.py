@@ -11,3 +11,4 @@ from .ja_branch_office import JaBranchOfficeList
 from .fuel_order_target_ja import FuelOrderTargetJaDetail
 from .fuel_order_list import FuelOrderList
 from .fuel_order_detail import FuelOrderDetail
+from .send_fuel_order_mail import SendFuelOrderMail

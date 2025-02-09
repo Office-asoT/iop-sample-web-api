@@ -1,9 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from api.models import FuelOrderTargetJa
+from api.serializers import FuelOrderTargetJaPublicSerializer
 
 class FarmFieldList(APIView):
 
     def get(self, request, user_id):
+
         farm_field_list = [
             {
                 'id': 'farm-field-a',
@@ -14,7 +17,6 @@ class FarmFieldList(APIView):
                 'crop': 'トマト',
                 'plantingDate': '2024-10-01',
                 'extensionOffice': '高知中央普及所',
-                'jaFuelSupplier': 'JA高知中央',
             },
             {
                 'id': 'farm-field-b',
@@ -25,7 +27,6 @@ class FarmFieldList(APIView):
                 'crop': 'ナス',
                 'plantingDate': '2024-09-01',
                 'extensionOffice': '南国普及所',
-                'jaFuelSupplier': 'JA南国',
             },
             {
                 'id': 'farm-field-c',
@@ -36,8 +37,22 @@ class FarmFieldList(APIView):
                 'crop': 'ピーマン',
                 'plantingDate': '2024-08-15',
                 'extensionOffice': '中央東農業振興センター',
-                'jaFuelSupplier': 'JA野市支所',
             },
         ]
+
+        respons_data = []
+        fuel_order_targets = FuelOrderTargetJa.objects.filter(user_id=user_id).order_by('id')
+        if fuel_order_targets:
+            serializer = FuelOrderTargetJaPublicSerializer(fuel_order_targets, many=True)
+            respons_data = serializer.data
+            ja_branch_offices = {data['farm_field_id']: data['ja_branch_office'] for data in respons_data}
+            for farm in farm_field_list:
+                farm_id = farm['id']
+                if farm_id in ja_branch_offices:
+                    farm.update({
+                        'ja_branch_office_name': ja_branch_offices[farm_id]['name'],
+                        'ja_branch_office_number': ja_branch_offices[farm_id]['number'],
+                        'ja_branch_office_email_address': ja_branch_offices[farm_id]['email_address']
+                    })
 
         return Response(farm_field_list)
