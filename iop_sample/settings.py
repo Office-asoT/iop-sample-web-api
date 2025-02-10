@@ -133,5 +133,33 @@ MAIL_CONTENT = {
     'TEST_MAIL': {
         'SUBJECT': 'サンプルアプリ テストメール',
         'MESSAGE': 'テストメールです。'
+    },
+    "FUEL_ORDER_MAIL": {
+        "SUBJECT": "燃料発注依頼",
+        "MESSAGE": """<p>{ja_branch_office_name} 燃料担当者様</p>
+        <p>下記依頼内容で燃料の発注をお願いいたします。</p>
+        <br>
+        <p>【依頼日時】{order_date}</p>
+        <p>【依頼者】{user_id}</p>
+        <p>【届け先ハウス】{farm_field_name}</p>
+        <p>【燃料種類】{fuel_type}</p>
+        <p>【数量】{quantity}L</p>
+        <br>
+        <p>依頼を確認した場合は、空メールで返信ください。</p>
+        """
+    },
+    "CANCEL_FUEL_ORDER_MAIL": {
+        "SUBJECT": "燃料発注キャンセル依頼",
+        "MESSAGE": """<p>{ja_branch_office_name} 燃料担当者様</p>
+        <p>下記依頼内容で依頼した燃料発注のキャンセルをお願いいたします。</p>
+        <br>
+        <p>【依頼日時】{order_date}</p>
+        <p>【依頼者】{user_id}</p>
+        <p>【届け先ハウス】{farm_field_name}</p>
+        <p>【燃料種類】{fuel_type}</p>
+        <p>【数量】{quantity}L</p>
+        <br>
+        <p>キャンセル依頼を確認した場合は、空メールで返信ください。</p>
+        """
     }
 }
