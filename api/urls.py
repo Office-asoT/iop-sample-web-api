@@ -17,4 +17,5 @@ urlpatterns = [
     path('fuel_orders/<str:user_id>', views.FuelOrderList.as_view()),
     path('fuel_order/<str:user_id>', views.FuelOrderDetail.as_view()),
     path('send_fuel_order_mail/<str:user_id>', views.SendFuelOrderMail.as_view()),
+    path('send_cancel_fuel_order_mail/<str:user_id>', views.SendCancelFuelOrderMail.as_view()),
 ]

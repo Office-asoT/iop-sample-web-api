@@ -8,7 +8,7 @@ class FuelOrderList(APIView):
 
     def get(self, request, user_id):
         respons_data = [];
-        fuel_orders = FuelOrder.objects.filter(user_id=user_id).order_by('id')
+        fuel_orders = FuelOrder.objects.filter(user_id=user_id).order_by('order_date').reverse()
 
         if fuel_orders:
             serializer = FuelOrderListPublicSerializer(fuel_orders, many=True)

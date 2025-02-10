@@ -35,5 +35,4 @@ class SendFuelOrderMail(APIView):
             return Response(status=response.status_code)
         
         except Exception as e:
-            print(e)
-            return Response({"error": str(e.message)}, status=500)
+            return Response({"error": str({e})}, status=500)
