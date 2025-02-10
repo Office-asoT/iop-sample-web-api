@@ -7,17 +7,23 @@ from api.serializers import DisplaySettingPublicSerializer
 BASE_SETTING = {
     'home': {
         'current-value': {
-          'air_temperature': True,
-          'relative_humidity': True,
-          'co2_concentration': True,
-          'solar_irradiance': True,
+            'air_temperature': True,
+            'relative_humidity': True,
+            'co2_concentration': True,
+            'solar_irradiance': True,
         },
         'environment-graph': {
-          'air_temperature': True,
-          'relative_humidity': True,
-          'co2_concentration': True,
-          'solar_irradiance': True,
+            'air_temperature': True,
+            'relative_humidity': True,
+            'co2_concentration': True,
+            'solar_irradiance': True,
         },
+    },
+    'graph': {
+        'air_temperature': True,
+        'relative_humidity': False,
+        'co2_concentration': False,
+        'solar_irradiance': False,
     },
 }
 
