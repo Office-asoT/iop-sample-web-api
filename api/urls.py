@@ -18,4 +18,7 @@ urlpatterns = [
     path('fuel_order/<str:user_id>', views.FuelOrderDetail.as_view()),
     path('send_fuel_order_mail/<str:user_id>', views.SendFuelOrderMail.as_view()),
     path('send_cancel_fuel_order_mail/<str:user_id>', views.SendCancelFuelOrderMail.as_view()),
+    path('warning_mail_settings/<str:user_id>', views.WarningMailSettingList.as_view()),
+    path('warning_mail_settings/<str:user_id>/<str:pk>', views.WarningMailSettingDetail.as_view()),
+    path('warning_histories/<str:user_id>', views.WarningHistoryList.as_view()),
 ]

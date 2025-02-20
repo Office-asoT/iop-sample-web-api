@@ -13,3 +13,6 @@ from .fuel_order_list import FuelOrderList
 from .fuel_order_detail import FuelOrderDetail
 from .send_fuel_order_mail import SendFuelOrderMail
 from .send_cancel_fuel_order_mail import SendCancelFuelOrderMail
+from .warning_mail_setting_list import WarningMailSettingList
+from .warning_mail_setting_detail import WarningMailSettingDetail
+from .warning_history_list import WarningHistoryList

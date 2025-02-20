@@ -5,3 +5,5 @@ from .delivery_email_address import DeliveryEmailAddress
 from .ja_branch_office import JaBranchOffice
 from .fuel_order_target_ja import FuelOrderTargetJa
 from .fuel_order import FuelOrder
+from .warning_history import WarningHistory
+from .warning_mail_setting import WarningMailSetting
